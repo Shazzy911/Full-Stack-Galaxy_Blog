@@ -1,0 +1,87 @@
+.container{
+    display: none;
+    .mainImage{
+        height: 5.5rem;
+        width: 5.5rem;
+        // animation: myAnim 2s ease 0s 1 normal forwards;
+        
+        
+        &:hover{
+            cursor: pointer;
+            animation: myAnim 2s ease 0s 1 normal forwards;
+            @keyframes myAnim {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) rotate(48deg);
+                }
+                25% {
+                    opacity: .5;
+                    transform: scale(0.8);
+                }
+                50% {
+                    opacity: .2;
+                    transform: scale(0.7) ;
+                }
+                75% {
+                    opacity: .5;
+                    transform: scale(0.6) ;
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+
+
+    .hamburger{
+        width: 3rem;
+        height: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: .5rem;
+        cursor: pointer;
+        .bar{
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transform-origin: left;
+            transition: all 2s ease;
+        }
+    }
+    &.active{
+        // background-color: $mainColor;
+        color: white;
+        .hamburger{
+            span{
+                &:first-child{           // First Line
+                    background-color: white;
+                    transform: rotate(41deg);
+                }
+                &:nth-child(2){          // Second Line Hide
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: white;
+                    transform: rotate(-41deg);
+    
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 1000px) {
+   .container{
+    display: flex;
+    height: 12rem;
+    background-color: #1a191e;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.5rem 0  4.5rem;
+    border-bottom: 1px solid black;
+    // box-shadow: 0 10px 10px -5px red;
+   }
+  }

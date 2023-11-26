@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 6.8rem 0 5rem 0;
+  background-color: #1d1c21;
+  padding: 4rem 0;
+  h1 {
+    font-size: 2.2em;
+    border-bottom: 2px solid #e4112f;
+    padding-bottom: 10px;
+  }
+  .desc {
+    padding: 0 2.8rem;
+    p {
+      text-align: center;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @mixin Same-style($search-width, $search-height, $search-padding-left) {
+    width: $search-width;
+    height: $search-height;
+    padding-left: $search-padding-left;
+    color: #495057;
+    color: #6c757d;
+    background-color: #1a191e;
+    outline: none;
+    border: 0.1rem solid #333139;
+    margin: 3rem 0; 
+
+    // font-weight: bold;
+  }
+  input {
+    @include Same-style(30rem, 5rem, 1.5rem);
+  }
+}

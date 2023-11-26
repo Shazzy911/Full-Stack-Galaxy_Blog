@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 0 7rem 6rem;
+  height: 100vh;
+  width: 25.3vw;
+  background-color: #1a191e;
+  gap: 6rem;
+  padding-top: 10rem;
+  position: sticky;
+  top:0;
+  
+  &.active{
+    left: 0;
+    display: flex;
+    transition: all 1s ease;
+  }
+
+  .mainImage{
+    height: 13rem;
+    width: 15rem ;
+  }
+}
+
+.links {
+  display: flex;
+  // text-align: center;
+  flex-direction: column;
+  gap: 1.9rem;
+  .link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: 1s all ease;
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container{
+    display: none;
+    position: fixed;
+    top: 0;
+    // left: -25.3vw;
+    min-width: 40vw;
+    z-index: 2;
+    transition: all 1s ease;
+    opacity: .9;
+    gap: 0;
+  padding-top: 0;
+  }
+  
+}
+@media screen and (max-width: 550px) {
+  .container{
+    min-width: 55vw; 
+  }
+  
+}
+
+
+
+//   &.active{  /// If active widht of Menu will be 300px
+//     right: 0;
+// }
+// ul{
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     font-size: 30px;
+//     font-weight: 300;
+//     color: white;
+//     width: 60%;  // Text will not move bcz of this property
+//     li{
+//         margin-bottom: 25px;
+//         a{
+//             font-size: inherit;
+//             color: inherit;
+//             text-decoration: none;
+//         }
+        
+
+//         &:hover{
+//             font-weight: 500;
+//         }
+//     }
+// }
+// }

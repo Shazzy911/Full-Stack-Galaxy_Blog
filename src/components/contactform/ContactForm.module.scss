@@ -1,0 +1,123 @@
+// =====================================
+// Here we define all the Mixin classes.
+// =====================================
+@mixin display_flex {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 3.2rem;
+}
+@mixin height_width {
+  height: 4.6rem;
+  width: 35rem;
+}
+@mixin input_select_textarea {
+  background-color: #1d1c21;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: white;
+}
+// ======================================
+// All Data of Scss in Container =======
+// ======================================
+.container {
+  background-color: #1d1c21;
+  height: 100%;
+  margin: 4.2rem 0;
+  padding-left: 5rem;
+  /// ==================================
+  /// ======== Main Heading style ======
+  /// ==================================
+  .heading {
+    font-size: 2.6em;
+    color: white;
+    margin: 6.2rem 0 4rem 3.2rem;
+  }
+  /// ==================================
+  /// ==== Label Class all Container ===
+  /// ==================================
+  .label {
+    color: white;
+    margin-bottom: 1.2rem;
+  }
+  /// ========================================
+  /// ========= Form Validation Scss =========
+  /// ========================================
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    /// ==================================
+    /// === Input Conatiner + Element style ===
+    /// ==================================
+    .inputContainer {
+      @include display_flex();
+      input {
+        @include input_select_textarea();
+        @include height_width();
+      }
+    }
+    /// =======================================
+    /// == Select Container + Element style ===
+    /// =======================================
+    .select {
+      @include display_flex();
+      select {
+        padding-left: 1.1rem;
+        @include input_select_textarea();
+        @include height_width();
+      }
+    }
+  }
+}
+/// =======================================
+/// == Message Container + Element style ==
+/// =======================================
+.messageContainer {
+  @include display_flex();
+  .message {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      width: 60rem;
+      height: 15rem;
+      margin-bottom: 3.5rem;
+      padding: 2rem 0;
+      @include input_select_textarea();
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100vw;
+    padding-left: 0;
+    form {
+      .messageContainer {
+        .message {
+          textarea {
+            width: 39rem;
+            height: 15rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100vw;
+    padding-left: 0;
+    form {
+      .messageContainer {
+        margin: 2rem 3rem 2rem 2.5rem;
+        .message {
+          textarea {
+            width: 37rem;
+            height: 15rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.container {
+    height: 4.25rem;
+    width: 16.4rem;
+    color: white;
+    background-color: #E4112F;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    // display: flex;
+    // align-items: center;
+    &:hover{
+      color: whitesmoke;
+      background-color: rgba(228, 17, 47, 0.7);
+      transition: .5s all ease;
+    }
+    .arrow{
+      margin-left: 1rem;
+    }
+  }
