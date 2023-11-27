@@ -52,6 +52,13 @@
     flex-direction: column;
     color: #b0b0b0;
     border-left: 4px solid #aa0c0c;
+    transition: all 1s ease;
+    box-shadow: 10px 9px 16px -2px black;
+    -webkit-box-shadow: 10px 9px 16px -2px black;
+    -moz-box-shadow: 10px 9px 16px -2px black;
+    &:hover{
+      border-left: 4px solid #158f1b;
+    }
     .secondHeading {
       font-size: 1.5em;
       margin-bottom: 2rem;
