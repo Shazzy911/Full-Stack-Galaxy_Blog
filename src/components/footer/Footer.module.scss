@@ -1,0 +1,43 @@
+.container {
+  background-color: #1d1c21;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10rem 0;
+  height: 55vh;
+  .linkContainer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    .heading {
+      color: white;
+      padding-bottom: 2rem;
+    }
+    a {
+      text-decoration: none;
+      padding: 1.2rem 0;
+      color: #a4a4a6;
+      font-size: 1.4rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (max-width: 501px) {
+  .container {
+    height: 120vh;
+    display: block;
+    padding: 8.5rem 0;
+    .linkContainer{
+        margin: 4rem 0 0 0;
+        .heading {
+            font-size: 2.1rem;
+            // padding-top: 2.4rem;
+          }
+          a {
+            font-size: 1.6rem;
+          }
+    }
+  }
+}
