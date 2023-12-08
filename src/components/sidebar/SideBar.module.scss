@@ -20,6 +20,59 @@
   .mainImage{
     height: 13rem;
     width: 15rem ;
+    &:hover{
+      cursor: pointer;
+      animation: customAni 2s ease 0s  normal none;
+      @keyframes customAni {
+        0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateX(-48px);
+        }
+      
+        24% {
+        opacity: 1;
+        }
+      
+        40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-26px);
+        }
+      
+        65% {
+        animation-timing-function: ease-in;
+        transform: translateX(-13px);
+        }
+      
+        82% {
+        animation-timing-function: ease-in;
+        transform: translateX(-6.5px);
+        }
+      
+        93% {
+        animation-timing-function: ease-in;
+        transform: translateX(-4px);
+        }
+      
+        25%,
+        55%,
+        75%,
+        87%,
+        98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+        }
+      
+        100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+        }
+      }
+      
+
+
+    }
   }
 }
 
@@ -36,6 +89,65 @@
     transition: 1s all ease;
     &:hover {
       color: rgba(255, 255, 255, 0.5);
+      -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+          @-webkit-keyframes shake-vertical {
+            0%,
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+            }
+            10%,
+            30%,
+            50%,
+            70% {
+              -webkit-transform: translateY(-1.7px);
+                      transform: translateY(-1.7px);
+            }
+            20%,
+            40%,
+            60% {
+              -webkit-transform: translateY(1.7px);
+                      transform: translateY(1.7px);
+            }
+            80% {
+              -webkit-transform: translateY(.7px);
+                      transform: translateY(.7px);
+            }
+            90% {
+              -webkit-transform: translateY(-.7px);
+                      transform: translateY(-.7px);
+            }
+          }
+          @keyframes shake-vertical {
+            0%,
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+            }
+            10%,
+            30%,
+            50%,
+            70% {
+              -webkit-transform: translateY(-1.7px);
+                      transform: translateY(-1.7px);
+            }
+            20%,
+            40%,
+            60% {
+              -webkit-transform: translateY(1.7px);
+                      transform: translateY(1.7px);
+            }
+            80% {
+              -webkit-transform: translateY(.7px);
+                      transform: translateY(.7px);
+            }
+            90% {
+              -webkit-transform: translateY(-.7px);
+                      transform: translateY(-.7px);
+            }
+          }
+
     }
   }
 }

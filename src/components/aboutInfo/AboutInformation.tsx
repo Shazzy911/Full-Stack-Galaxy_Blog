@@ -1,5 +1,5 @@
 import style from "./AboutInformation.module.scss";
-import Profile from "@/images/author.png"
+import Profile from "@/images/author1.jpg"
 import Image from "next/image";
 import Privacy from "../privacy/Privacy";
 

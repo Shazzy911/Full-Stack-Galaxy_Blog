@@ -77,3 +77,9 @@ const Page = async ({ params }: Data) => {
 };
 
 export default Page;
+export function generateMetadata () { 
+  return{
+    title: "Galaxy - Blog ",
+    description: "This is the galaxy blog, it contains information about the developer and owner of  website",
+  }
+}

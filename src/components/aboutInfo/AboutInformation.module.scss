@@ -1,14 +1,42 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 73%;
+  // align-items: center;
+  width: 75%;
   flex-direction: column;
   margin: 4.2rem 0;
   //   padding-left: 1.5rem;
   .mainImage {
-    height: 41.6rem;
-    width: 72.5rem;
+    height: 43rem;
+    width: 75rem;
+    &:hover {
+      cursor: pointer;
+      /// Here we added the animation for the main-imageS
+      -webkit-animation: blink-2 0.9s both;
+      animation: blink-2 0.9s both;
+      @-webkit-keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
   h1 {
     font-size: 3em;

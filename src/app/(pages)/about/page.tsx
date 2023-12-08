@@ -17,3 +17,9 @@ const page = () => {
 }
 
 export default page
+export function generateMetadata () { 
+  return{
+    title: "Galaxy About - Shahzaib",
+    description: "This is the galaxy blog, it contains information about the developer and owner of  website",
+  }
+}

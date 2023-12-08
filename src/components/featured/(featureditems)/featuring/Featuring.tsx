@@ -33,7 +33,7 @@ const Featuring = async () => {
                 width={310}
                 height={200}
                 alt="Image Not found"
-                className={style.image}
+                className={style.mainImage}
               />
               <div className={style.bloginfo}>
                 <div className={style.headingBox}>
@@ -51,7 +51,7 @@ const Featuring = async () => {
                     <p className={style.textParagraph}>{data.category}</p>
                   </span>
                 </div>
-                <Button text="Read More" href={`/featured/${data._id}`} />
+                <Button text="Read More" href={`/featured/${data._id}/${data.title}`} />
               </div>
             </div>
           ))}

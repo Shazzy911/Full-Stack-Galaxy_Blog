@@ -1,9 +1,15 @@
+// Variables for Color and size ;
+$primary-color: #1a191e;
+// :export {
+//   primary-color: $primary-color;
+// };
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-$primary-color: #1a191e;
+
 html {
   font-size: 62.5%;
 }
@@ -18,11 +24,11 @@ body {
 
 .light {
   background-color: white;
-  color: #111;
+  color: $primary-color;
 }
 
 .dark {
-  background-color: #111;
+  background-color: $primary-color;
   color: #bbb;
 }
 

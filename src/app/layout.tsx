@@ -14,7 +14,7 @@ const ubuntu = Poppins(
 );
 
 export const metadata = {
-  title: "Galaxy - Personal Blog",
+  title: "Galaxy - Shahzaib Blog",
   description:
     "This is the blogging app for the Galaxy Blog, which includes all the information related to the Real time news Stories and News",
 };

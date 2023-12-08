@@ -1,6 +1,36 @@
 .container {
   width: 62%;
   margin-top: 7rem;
+  .mainImage{
+    &:hover {
+      cursor: pointer;
+      /// Here we added the animation for the main-image
+      -webkit-animation: blink-2 0.9s both;
+      animation: blink-2 0.9s both;
+      @-webkit-keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
   .blogCard {
     margin-bottom: 6rem;
   }
@@ -52,7 +82,7 @@
   .container {
     width: 96%;
     padding-right: 1rem;
-    #imageSize {
+    .mainImage {
       width: 70rem;
       height: 43rem;
     }
@@ -70,7 +100,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0 1.5rem;
-    #imageSize {
+    .mainImage {
       width: 52rem;
       height: 35rem;
     }
@@ -91,7 +121,7 @@
         line-height: 1.4;
       }
     }
-    #imageSize {
+    .mainImage {
       width: 44rem;
       height: 31rem;
     }

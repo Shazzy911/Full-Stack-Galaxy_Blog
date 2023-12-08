@@ -10,7 +10,9 @@ import { useQuery } from "react-query";
 
 
 const fetchBlogPosts = async () => {
-  const response = await fetch("http://localhost:3000/api/blog");
+  const response = await fetch("http://localhost:3000/api/blog", {
+    cache: "force-cache",
+  });
 
   if (!response.ok) {
     throw new Error("Server is not Responding");
@@ -41,7 +43,7 @@ const MainPage = async () => {
             width={575}
             height={371}
             alt="Image Not found"
-            id={style.imageSize}
+            className={style.mainImage}
           />
           <div className={style.bloginfo}>
             <div className={style.headingBox}>
@@ -60,7 +62,7 @@ const MainPage = async () => {
               </span>
             </div>
             <p className={style.mainDesc}>{value.desc}</p>
-            <Button text="Read More" href={`/blog/${value._id}`} />
+            <Button text="Read More" href={`/blog/${value._id}/${value.title}`} />
           </div>
         </div>
       ))}
