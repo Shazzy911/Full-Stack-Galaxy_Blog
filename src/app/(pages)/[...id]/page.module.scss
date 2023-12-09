@@ -3,6 +3,7 @@
   width: 58vw;
   flex-direction: column;
   margin: 4.2rem 0;
+  padding-left: 5rem;
   .mainImage {
     height: 48rem;
     width: 75rem;
@@ -40,7 +41,7 @@
   }
   p {
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.5);
+    // color: rgba(255, 255, 255, 0.5);
   }
   .privacyData {
     width: 55vw;
@@ -205,6 +206,7 @@
     width: 94vw;
     align-items: center;
     margin-left: 3rem;
+    padding-left: 2rem;
     .mainImage {
       height: 50rem;
       width: 80rem;
@@ -221,6 +223,7 @@
   .container {
     // width: 94vw;
     align-items: start;
+    padding-left: 1rem;
     .mainImage {
       height: 45rem;
       width: 70rem;
@@ -234,6 +237,7 @@
 @media screen and (max-width: 550px) {
   .container {
     margin-left: 1.5rem;
+    padding-left: 0;
     .mainImage {
       height: 36rem;
       width: 52rem;

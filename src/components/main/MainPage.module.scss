@@ -41,12 +41,14 @@
       margin: 0.5em 0;
       line-height: 1.3;
 
-      &:hover {
-        color: #b0b0b0;
-      }
+      
       a {
         text-decoration: none;
-        color: white;
+        transition: 1s ease all;
+        // color: white;
+        &:hover {
+          color: #beb8b8 ;
+        }
       }
     }
   }
@@ -68,16 +70,19 @@
       }
     }
   }
-  .textParagraph {
-    color: #b0b0b0;
-  }
+  // .textParagraph {
+  //   color: #b0b0b0;
+  // }
   .mainDesc {
     margin: 2.2rem 0;
     line-height: 1.4;
-    color: #b0b0b0;
     // width: 56rem
   }
 }
+
+// ========================    Media queries for Responsive Design =========================
+//  ========================================================================================
+
 @media screen and (max-width: 770px) {
   .container {
     width: 96%;

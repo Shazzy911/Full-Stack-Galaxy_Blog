@@ -1,26 +1,14 @@
+@import "./styles/colors.module.scss";
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    // background-color: red;
-    background-color: #1d1c21;
-    // background-color: red;
-    // transition: 1s all ease-in-out;
-    // animation: loader 2s ease;
+    background-color: $primary-background-color;
     z-index: 100;
 }
 
-
-// @keyframes loader {
-//     from{
-//         height: 50vh;
-//     }
-//     to{
-//         height: 0vh;
-//     }
-// }
 
 
 

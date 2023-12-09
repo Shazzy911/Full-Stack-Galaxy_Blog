@@ -1,3 +1,5 @@
+@import "../../app/styles/colors.module.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   padding: 2rem 0 7rem 6rem;
   height: 100vh;
   width: 25.3vw;
-  background-color: #1a191e;
+  background-color: $secondary-background-color;
   gap: 6rem;
   padding-top: 10rem;
   position: sticky;
@@ -83,12 +85,12 @@
   gap: 1.9rem;
   .link {
     text-decoration: none;
-    color: white;
+    color: $link-main-color;
     font-weight: 500;
     font-size: 1.8rem;
     transition: 1s all ease;
     &:hover {
-      color: rgba(255, 255, 255, 0.5);
+      color: $link-color ;
       -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
           @-webkit-keyframes shake-vertical {

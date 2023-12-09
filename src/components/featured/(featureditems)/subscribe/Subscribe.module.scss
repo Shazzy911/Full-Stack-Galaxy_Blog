@@ -1,25 +1,27 @@
+@import "../../../../app/styles/colors.module.scss";
 .container {
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 6.8rem 0 5rem 0;
-  background-color: #1d1c21;
+  background-color: $secondary-background-color;
   padding: 4rem 0;
-  
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   
   h1 {
     font-size: 2.2em;
     border-bottom: 2px solid #e4112f;
     padding-bottom: 10px;
+    color: $link-main-color;
   }
   .desc {
     padding: 0 2.8rem;
     p {
       text-align: center;
-      line-height: 1.5;
-      color: rgba(255, 255, 255, 0.5);
+    color: $link-main-color;
+
     }
   }
 
@@ -27,9 +29,8 @@
     width: $search-width;
     height: $search-height;
     padding-left: $search-padding-left;
-    color: #495057;
-    color: #6c757d;
-    background-color: #1a191e;
+    // color: #6c757d;
+    // background-color: $secondary-background-color;
     outline: none;
     border: 0.1rem solid #333139;
     margin: 3rem 0; 

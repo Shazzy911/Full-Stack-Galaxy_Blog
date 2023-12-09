@@ -1,5 +1,6 @@
+@import "../../app/styles/colors.module.scss";
 .container {
-  background-color: #1d1c21;
+  background-color: $secondary-background-color;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -16,7 +17,7 @@
     a {
       text-decoration: none;
       padding: 1.2rem 0;
-      color: #a4a4a6;
+      color: $link-main-color;
       font-size: 1.4rem;
       &:hover {
         text-decoration: underline;

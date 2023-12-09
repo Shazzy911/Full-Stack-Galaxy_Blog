@@ -1,8 +1,5 @@
 // Variables for Color and size ;
-$primary-color: #1a191e;
-// :export {
-//   primary-color: $primary-color;
-// };
+@import "./colors.module.scss";
 
 *{
   margin: 0;
@@ -16,21 +13,21 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Courier New', Courier, monospace;
-  color: white;
+  color: $pure-white;
 }
 .theme{
   transition: 1s all ease;
 }
 
-.light {
-  background-color: white;
-  color: $primary-color;
-}
+// .light {
+//   background-color: $secondary-color;
+//   color: $primary-color;
+// }
 
-.dark {
-  background-color: $primary-color;
-  color: #bbb;
-}
+// .dark {
+//   background-color: $primary-color;
+//   color: $secondary-color;
+// }
 
 
 .container {
@@ -38,7 +35,14 @@ body {
 }
 .main-container {
   width: 75vw;
-  background-color: $primary-color;
+  background-color: $primary-background-color;
+  p{
+    color: $paragraph-text-color;
+    line-height: 1.5;
+  }
+  a{
+    color: $pure-white;
+  }
 }
 
 // ====================================

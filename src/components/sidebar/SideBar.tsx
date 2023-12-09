@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import style from "./SideBar.module.scss";
 import Hero from "@/images/logo.png";
-import SocialApp from "../social/SocialApp";
-// import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+// import SocialApp from "../social/SocialApp";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { useAppDispatch, useAppSelector } from "@/app/redux/hooks/index";
 import { setMenuOpen } from "@/app/redux/menuSlice";
 
@@ -27,8 +27,8 @@ const SideBar = () => {
          {/* //////////////////// Here we have to do a lot of code changes ///////////// */}
 
       </div>
-      <SocialApp/>
-      {/* <DarkModeToggle/> */}
+      {/* <SocialApp/> */}
+      <DarkModeToggle/>
     </aside>
   );
 };

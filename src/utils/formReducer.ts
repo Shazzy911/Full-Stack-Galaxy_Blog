@@ -36,7 +36,6 @@ export const formReducer = (state: INITIAL_TYPE, action: Action_Type) => {
                 ...state,
               INITIAL_VALUE : action.payload.value
             }
-
         default:
             return state;
     }
