@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { useAppSelector } from "./redux/hooks";
 
 const queryClient = new QueryClient();
-const page = () => {
+const Page = () => {
 const toggleOpen = useAppSelector((state: any ) => state.toggle.toggleOpen);
 
 
@@ -24,4 +24,4 @@ const toggleOpen = useAppSelector((state: any ) => state.toggle.toggleOpen);
   );
 };
 
-export default page;
+export default Page;

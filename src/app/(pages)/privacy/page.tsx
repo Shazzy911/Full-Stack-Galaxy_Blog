@@ -1,7 +1,7 @@
 import SearchBar from "@/components/SearchBar/SearchBar";
 import style from "./page.module.scss";
 import Privacy from "@/components/privacy/Privacy";
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className={style.container}>
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

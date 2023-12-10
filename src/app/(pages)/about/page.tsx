@@ -5,7 +5,7 @@ import AboutInformation from "@/components/aboutInfo/AboutInformation"
 
 
 
-const page = () => {
+const Page = () => {
   return (
     <>
     <div className={style.container}>
@@ -16,7 +16,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;
 export function generateMetadata () { 
   return{
     title: "Galaxy About - Shahzaib",

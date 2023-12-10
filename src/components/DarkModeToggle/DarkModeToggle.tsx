@@ -12,8 +12,8 @@ export default function DarkModeToggle() {
   return (
     // JSX
     <div className={styles.container}  onClick={() => dispatch(setToggleOpen(!toggleOpen))} >  
-      <div className={styles.icon}>🌙</div>
       <div className={styles.icon}>🔆</div>
+      <div className={styles.icon}>🌙</div>
       <div
         className={`${styles.ball} ${toggleOpen ? styles.active : ''}`}
       />
