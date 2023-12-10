@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   return (
     <div className={style.container}>
-      <h1 className={style.heading}>Let's Contact Us</h1>
+      <h1 className={style.heading}>Lets Contact Us</h1>
       <form onSubmit={submitForm} className={style.form}>
         <div className={style.inputContainer}>
           <label className={style.label}>First Name</label>
