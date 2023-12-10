@@ -6,6 +6,9 @@ import SideBar from "@/components/sidebar/SideBar";
 import Footer from "@/components/footer/Footer";
 import TopBar from "@/components/topbar/TopBar";
 
+// import { useAppSelector } from "./redux/hooks";
+
+
 const ubuntu = Poppins(
   {
     weight: "400",
@@ -25,7 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  // const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  if (typeof window !== "undefined") {
+    const toggleOpen = localStorage.getItem("toggleOpen") ?? false;
+    
+    console.log(toggleOpen);
+  }
   return (
     <html lang="en">
       <body className={ubuntu.className}>
@@ -34,12 +41,15 @@ export default function RootLayout({
             <TopBar />
             <div className="container">
               <SideBar />
+              {/* <div className={`${"main-container"} ${toggleOpen ? "active" : ''}`}> */}
+
               <div className="main-container">
                 {children}
                 <React.Fragment>
                   <Footer />
                 </React.Fragment>
               </div>
+             
             </div>
           </div>
         </Providers>

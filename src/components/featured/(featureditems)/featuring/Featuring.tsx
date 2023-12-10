@@ -10,7 +10,7 @@ import { BiSolidCategoryAlt } from "react-icons/bi";
 const getData = async () => {
   try {
     let response = await fetch("http://localhost:3000/api/featured", {
-      cache: "no-cache"
+      cache: "default"
     });
     let data: postProps[] = await response.json();
     return data;
@@ -51,7 +51,7 @@ const Featuring = async () => {
                     <p className={style.textParagraph}>{data.category}</p>
                   </span>
                 </div>
-                <Button text="Read More" href={`/featured/${data._id}/${data.title}`} />
+                <Button text="Read More" href={`/featured/${data._id}`} />
               </div>
             </div>
           ))}

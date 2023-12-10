@@ -1,8 +1,44 @@
+@import "./styles/colors.module.scss";
 .container{
     display: flex;
     // margin-top: 7rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
+  //   background-color: $primary-background-color1;
+  // p{
+  //   color: $paragraph-text-color1;
+  //   line-height: 1.5;
+  // }
+  // a{
+  //   color: $color-white-black1;
+  // }
 }
+.container.active {
+  background-color: $primary-background-color1;
+  color: $color-white-black1;
+
+  p{
+    color: $paragraph-text-color1;
+    line-height: 1.5;
+  }
+  a{
+    color: $color-white-black1;
+  }
+}
+.container:not(.active) {
+  background-color: $primary-background-color2;
+  color: $color-white-black2;
+
+  p{
+    color: $paragraph-text-color2;
+    line-height: 1.5;
+  }
+  a{
+    color: $color-white-black2;
+  }
+}
+
+
+
 @media screen and (max-width: 1000px) {
   .container{
     width: 100%;

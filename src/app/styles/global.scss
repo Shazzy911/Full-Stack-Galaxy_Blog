@@ -13,7 +13,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Courier New', Courier, monospace;
-  color: $pure-white;
+  color: $color-white-black1;
 }
 .theme{
   transition: 1s all ease;
@@ -35,13 +35,13 @@ body {
 }
 .main-container {
   width: 75vw;
-  background-color: $primary-background-color;
+  background-color: $primary-background-color1;
   p{
-    color: $paragraph-text-color;
+    color: $paragraph-text-color1;
     line-height: 1.5;
   }
   a{
-    color: $pure-white;
+    color: $color-white-black1;
   }
 }
 

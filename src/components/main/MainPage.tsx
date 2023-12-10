@@ -11,7 +11,7 @@ import { useQuery } from "react-query";
 
 const fetchBlogPosts = async () => {
   const response = await fetch("http://localhost:3000/api/blog", {
-    cache: "force-cache",
+    cache: "default"
   });
 
   if (!response.ok) {
@@ -62,7 +62,7 @@ const MainPage = async () => {
               </span>
             </div>
             <p className={style.mainDesc}>{value.desc}</p>
-            <Button text="Read More" href={`/blog/${value._id}/${value.title}`} />
+            <Button text="Read More" href={`/blog/${value._id}`} />
           </div>
         </div>
       ))}

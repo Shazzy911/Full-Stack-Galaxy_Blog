@@ -1,31 +1,21 @@
 "use client"
+import { useAppDispatch, useAppSelector } from "@/app/redux/hooks";
 import styles from "./DarkModeToggle.module.scss";
-import { useContext } from 'react';
-// import { ThemeContext } from "@/context/ThemeContext";
-
-interface ContextValue {
-  toggle: () => void;
-  mode: "dark" | "light";
-}
+import { setToggleOpen } from "@/app/redux/toggleSlice";
 
 export default function DarkModeToggle() {
-
-  // const context = useContext(ThemeContext);
-
-  // if (!context) {
-  //   throw new Error('ThemeContext undefined');  
-  // }
-
-  // const {toggle, mode}: ContextValue = context;
-  // onClick={toggle}
+  const dispatch = useAppDispatch();
+  const toggleOpen = useAppSelector((state: any ) => state.toggle.toggleOpen);
+ localStorage.setItem("togggleOpen", toggleOpen);
+// console.log(toggleOpen);
+  
   return (
     // JSX
-    <div className={styles.container}   >  
+    <div className={styles.container}  onClick={() => dispatch(setToggleOpen(!toggleOpen))} >  
       <div className={styles.icon}>🌙</div>
       <div className={styles.icon}>🔆</div>
       <div
-        className={styles.ball}
-        // style={mode === "light" ? { left: "2px" } : { right: "2px" }}
+        className={`${styles.ball} ${toggleOpen ? styles.active : ''}`}
       />
     </div>
   );

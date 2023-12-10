@@ -18,7 +18,19 @@
   .ball{
     width: 15px;
     height: 15px;
-    background-color: rgba(228, 17, 47, 0.7);
+    // background-color: rgba(228, 17, 47, 0.7);
+    background-color: green;
     border-radius: 50%;
     position: absolute;
+
+    
   }
+  .ball.active {
+    right: 2px;
+    transition: all .5s ease;
+  }
+  .ball:not(.active) {
+    left: 2px;
+  }
+
+  // style={toggleOpen === "true" ? {  } : { right: "2px" }}
