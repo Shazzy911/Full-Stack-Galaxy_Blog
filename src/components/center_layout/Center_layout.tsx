@@ -1,39 +1,33 @@
-import style from "./MainPage.module.scss";
+import style from "./Center_layout.module.scss";
 import Image from "next/image";
 import Button from "../buttons/Button";
 import Link from "next/link";
 import { postProps } from "@/types/postList";
 import { FaClock } from "react-icons/fa6";
 import { BiSolidCategoryAlt } from "react-icons/bi";
-import { useQuery } from "react-query";
+
 
 
 
 const fetchBlogPosts = async () => {
-  const response = await fetch("http://localhost:3000/api/blog", {
-    cache: "default"
-  });
-
-  if (!response.ok) {
+  // Using Function to fetching data in Server Component.....
+  try {
+    let response = await fetch("http://localhost:3000/api/blog", {
+      cache: "force-cache"
+    });
+    let data: postProps[] = await response.json();
+    return data;
+  } catch (error) {
     throw new Error("Server is not Responding");
   }
-
-  const data: postProps[] = await response.json();
-  return data;
 };
-const MainPage = async () => {
-  // let blogPost: postProps[] = await getData();
-  const { data: blogPost, isLoading, isError } = useQuery('blogPosts', fetchBlogPosts);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  if (isError) {
-    return <div>Error loading data</div>;
-  }
-  if (!blogPost) {
-    return <div>No data available</div>;
-  }
+
+
+
+
+const Center_layout = async () => {
+  let blogPost: postProps[] = await fetchBlogPosts();
   return (
     <div className={style.container}>
       {blogPost.map((value) => (
@@ -70,4 +64,4 @@ const MainPage = async () => {
   );
 };
 
-export default MainPage;
+export default Center_layout;

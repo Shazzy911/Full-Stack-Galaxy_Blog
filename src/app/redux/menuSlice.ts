@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 type MenuState = {
   menuOpen: boolean;
 };
-
 type SetMenuOpenAction = {
   type: string;
   payload: boolean;

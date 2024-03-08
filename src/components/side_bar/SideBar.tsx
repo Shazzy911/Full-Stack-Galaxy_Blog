@@ -5,11 +5,9 @@ import Link from "next/link";
 import style from "./SideBar.module.scss";
 import Hero from "@/images/logo.png";
 // import SocialApp from "../social/SocialApp";
-import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import DarkModeToggle from "../dark_mode_toggle/DarkModeToggle";
 import { useAppDispatch, useAppSelector } from "@/app/redux/hooks/index";
 import { setMenuOpen } from "@/app/redux/menuSlice";
-
-
 
 const SideBar = () => {
   // const menuOpen = useAppSelector((state) => state.menuOpen);

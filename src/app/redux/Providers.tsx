@@ -8,7 +8,7 @@ interface ReactProviderProps {
     children: React.ReactNode;
 }
 
-const Providers = ({children}: ReactProviderProps) => {
+const Providers:React.FC<ReactProviderProps> = ({children}) => {
   return (
     <Provider store={store}>
      {children}
