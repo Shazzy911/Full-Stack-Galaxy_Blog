@@ -11,7 +11,6 @@ const POST = async (req) => {
     await mongoose.connect(process.env.MONGODB_URI);
     let contact = new contact_info(payload);
     const result = await contact.save();
-    // console.log(result);
     return NextResponse.json({ result, success: true }, { status: 201 });
   } catch (error) {
     return NextResponse.json(
