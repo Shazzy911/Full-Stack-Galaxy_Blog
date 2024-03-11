@@ -11,6 +11,7 @@ const GET = async (req) => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     data = await featured.find();
+    console.log(data);
   } catch (error) {
     data = { result: "error" };
     success: false;

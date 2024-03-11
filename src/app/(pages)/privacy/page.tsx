@@ -1,4 +1,4 @@
-import SearchBar from "@/components/SearchBar/SearchBar";
+import SearchBar from "@/components/search_bar/SearchBar";
 import style from "./page.module.scss";
 import Privacy from "@/components/privacy/Privacy";
 const Page = () => {
@@ -18,3 +18,9 @@ const Page = () => {
 };
 
 export default Page;
+export function generateMetadata () { 
+  return{
+    title: "Galaxy Blog - Privacy",
+    description: "This is the galaxy blog, it contains information about the developer and owner of  website",
+  }
+}

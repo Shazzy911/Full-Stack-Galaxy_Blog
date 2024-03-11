@@ -13,7 +13,7 @@ const fetchBlogPosts = async () => {
   // Using Function to fetching data in Server Component.....
   try {
     let response = await fetch("http://localhost:3000/api/blog", {
-      cache: "force-cache"
+      cache: "no-cache"
     });
     let data: postProps[] = await response.json();
     return data;
@@ -23,14 +23,11 @@ const fetchBlogPosts = async () => {
 };
 
 
-
-
-
-const Center_layout = async () => {
-  let blogPost: postProps[] = await fetchBlogPosts();
+const Center_layout = async ( ) => {
+  let data: postProps[] = await fetchBlogPosts();
   return (
     <div className={style.container}>
-      {blogPost.map((value) => (
+      {data.map((value) => (
         <div className={style.blogCard} key={value.id}>
           <Image
             src={value.image || "@/images/post/post-lg/02.png"}
@@ -42,7 +39,7 @@ const Center_layout = async () => {
           <div className={style.bloginfo}>
             <div className={style.headingBox}>
               <h1 className={style.heading}>
-                <Link href={`/blog/${value._id}`}>{value.title}</Link>
+                <Link href={`/blogs/${value._id}`}>{value.title}</Link>
               </h1>
             </div>
             <div className={style.date_category}>
@@ -56,7 +53,7 @@ const Center_layout = async () => {
               </span>
             </div>
             <p className={style.mainDesc}>{value.desc}</p>
-            <Button text="Read More" href={`/blog/${value._id}`} />
+            <Button text="Read More" href={`/blogs/${value._id}`}/>
           </div>
         </div>
       ))}

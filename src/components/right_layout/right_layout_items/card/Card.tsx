@@ -1,6 +1,6 @@
 import style from "./Card.module.scss";
 import Image from "next/image";
-import Author from "@/images/moon2.png";
+import Author from "@/images/Potrait.png";
 import SocialApp from "../../../social/SocialApp";
 
 const size = 230;
