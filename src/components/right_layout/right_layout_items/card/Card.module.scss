@@ -8,6 +8,7 @@
 
 .container {
   @include Same-style();
+  padding: 1rem 0 3rem 0;
   .cardInfo {
   @include Same-style();
     h1 {

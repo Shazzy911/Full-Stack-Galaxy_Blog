@@ -1,26 +1,3 @@
-// import mongoose from "mongoose";
-// import feature from "@/lib/models/featured";
-// import { NextResponse } from "next/server";
-
-// const GET = async (request, { params }) => {
-//   const { id } = params;
-//   console.log(id)
-
-//   try {
-//     await mongoose.connect(process.env.MONGODB_URI);
-
-//     const post = await feature.findById(id);
-
-//     return new NextResponse(JSON.stringify(post), { status: 200 });
-//   } catch (err) {
-//     return new NextResponse("Database Error", { status: 500 });
-//   }
-// };
-
-// export { GET };
-
-
-
 import mongoose from "mongoose";
 import NodeCache from "node-cache";
 import feature from "@/lib/models/featured";

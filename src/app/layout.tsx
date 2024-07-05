@@ -2,9 +2,9 @@ import React from "react";
 import "./styles/global.scss";
 import { Poppins } from "next/font/google";
 import Providers from "./redux/Providers"  // This is the Providers coming from Redux store...
+import TopBar from "@/components/top_bar/TopBar"; 
 import SideBar from "@/components/side_bar/SideBar";
 import Footer from "@/components/footer/Footer";
-import TopBar from "@/components/top_bar/TopBar";
 const poppins = Poppins(
   {
     weight: "400",

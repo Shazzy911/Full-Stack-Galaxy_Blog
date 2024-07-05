@@ -3,8 +3,6 @@
     .mainImage{
         height: 5.5rem;
         width: 5.5rem;
-        // animation: myAnim 2s ease 0s 1 normal forwards;
-        
         
         &:hover{
             cursor: pointer;
@@ -53,19 +51,20 @@
     }
     &.active{
         // background-color: $mainColor;
+        background-color: red;
         color: white;
         .hamburger{
             span{
                 &:first-child{           // First Line
                     background-color: white;
-                    transform: rotate(41deg);
+                    transform: rotate(40deg);
                 }
                 &:nth-child(2){          // Second Line Hide
                     opacity: 0;
                 }
-                &:last-child{
+                &:last-child{           // Third
                     background-color: white;
-                    transform: rotate(-41deg);
+                    transform: rotate(-40deg);
     
                 }
             }

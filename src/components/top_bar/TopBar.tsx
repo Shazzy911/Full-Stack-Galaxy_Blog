@@ -5,20 +5,14 @@ import Hero from "@/images/trace.svg";
 import { useAppDispatch, useAppSelector } from "@/app/redux/hooks/index";
 import { setMenuOpen } from "@/app/redux/menuSlice";
 // import {RootState} from "@/types/data"
-// import { useDispatch, useSelector } from "react-redux";
-// fbe05f
-// d310c1
-interface RootState {
-  menu: {
-    menuOpen: boolean;
-  };
-}
+
 
 const TopBar = () => {
-
-  // const dispatch = useAppDispatch();
-  const dispatch = useAppDispatch()
+    // Unused Code with the Typescript, type
   // const menuOpen = useAppSelector((state: RootState ) => state.menu.menuOpen);
+
+
+  const dispatch = useAppDispatch()
   const menuOpen = useAppSelector((state: any ) => state.menu.menuOpen);
   return (
     <>
