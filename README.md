@@ -54,6 +54,9 @@ Enjoy building your blog with Next.js and SCSS!;
 
 # Task in Progress....
 
+### Make it deployment ready.
+#### http://localhost:3000/api/blog remove localhost:3000 from cebter-layout & featured-layout
+
  ### 1. Add React-hook-form with the Zod... clean the previous code of Contact form
  ### 1. See the code of useReducer hook and learn from gemini documentation...
  ### ["https://react-hook-form.com/get-started#Applyvalidation"];
